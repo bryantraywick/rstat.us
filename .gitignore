@@ -15,3 +15,4 @@ capybara*
 .DS_Store
 .bundle
 vendor/bundle
+config/secret_token.yml
