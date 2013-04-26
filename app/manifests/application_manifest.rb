@@ -24,6 +24,13 @@ class ApplicationManifest < Moonshine::Manifest::Rails
   recipe :mongodb
   recipe :god
   recipe :dj
+  
+  configure(
+    :god => {
+      :log_level => 'info',
+      :log_file => "#{configuration[:deploy_to]}/shared/log/god.log"
+    }
+  )
 
   # Add your application's custom requirements here
   def application_packages
